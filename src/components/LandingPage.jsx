@@ -94,52 +94,57 @@ const LandingPage = () => {
     }
   ];
 
-  const pricing = [
-    {
-      name: "Starter",
-      price: "$29",
-      period: "/month",
-      description: "Perfect for small schools and pilot programs",
-      features: [
-        "Up to 100 students",
-        "Basic analytics dashboard",
-        "Email notifications",
-        "CSV data import",
-        "Standard support"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$79",
-      period: "/month",
-      description: "Ideal for medium-sized institutions",
-      features: [
-        "Up to 500 students",
-        "Advanced ML analytics",
-        "Real-time alerts",
-        "API integrations",
-        "Parent dashboards",
-        "Priority support"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "Custom",
-      period: "",
-      description: "For large institutions and districts",
-      features: [
-        "Unlimited students",
-        "Custom ML models",
-        "White-label solution",
-        "Advanced reporting",
-        "Dedicated support",
-        "On-premise deployment"
-      ],
-      popular: false
-    }
-  ];
+    const pricing = [
+  {
+    name: "Starter",
+    price: "$19",
+    period: "/month",
+    originalPrice: "$49",
+    badge: "🚀 Launch Offer",
+    description: "Perfect for small schools and pilot programs",
+    features: [
+      "Up to 30 students",
+      "25 AI quiz generations/month",
+      "Basic skill assessment",
+      "Student performance tracking",
+      "Email support"
+    ],
+    popular: false
+  },
+  {
+    name: "Professional",
+    price: "$49",
+    period: "/month",
+    originalPrice: "$129",
+    badge: "Most Popular",
+    description: "Ideal for medium-sized institutions",
+    features: [
+      "Up to 100 students",
+      "80 AI quiz generations/month",
+      "Advanced skill analysis (LOW/MEDIUM/HIGH)",
+      "Complete analytics dashboard",
+      "Personalized study resources",
+      "Priority support"
+    ],
+    popular: true
+  },
+  {
+    name: "Enterprise",
+    price: "Custom",
+    period: "",
+    badge: "Contact Sales",
+    description: "For large institutions and districts",
+    features: [
+      "Unlimited students",
+      "Unlimited AI quiz generations",
+      "Advanced analytics & reporting",
+      "Multiple professor accounts",
+      "Custom integrations & API access",
+      "24/7 dedicated support"
+    ],
+    popular: false
+  }
+];
 
   return (
     <div className="min-h-screen bg-black">
@@ -553,45 +558,58 @@ const LandingPage = () => {
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
-              <div key={index} className={`rounded-2xl p-8 ${plan.popular ? 'bg-gradient-to-r from-yellow-500 to-yellow-600 transform scale-105 shadow-2xl shadow-yellow-500/20' : 'bg-black border-2 border-yellow-500/20'} hover:shadow-xl transition-all`}>
-                {plan.popular && (
-                  <div className="text-center mb-4">
-                    <span className="bg-black text-yellow-400 px-4 py-1 rounded-full text-sm font-medium">Most Popular</span>
-                  </div>
-                )}
-                
-                <div className="text-center">
-                  <h3 className={`text-2xl font-bold mb-2 ${plan.popular ? 'text-black' : 'text-white'}`}>{plan.name}</h3>
-                  <div className="mb-4">
-                    <span className={`text-4xl font-bold ${plan.popular ? 'text-black' : 'text-white'}`}>{plan.price}</span>
-                    <span className={`text-lg ${plan.popular ? 'text-gray-900' : 'text-gray-400'}`}>{plan.period}</span>
-                  </div>
-                  <p className={`mb-8 ${plan.popular ? 'text-gray-900' : 'text-gray-400'}`}>{plan.description}</p>
-                </div>
-
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start space-x-3">
-                      <CheckCircle className={`w-5 h-5 mt-0.5 ${plan.popular ? 'text-black' : 'text-yellow-500'}`} />
-                      <span className={plan.popular ? 'text-black' : 'text-gray-300'}>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <button 
-                  onClick={() => handleTrialStart(plan.name)}
-                  className={`w-full py-4 px-6 rounded-xl font-bold text-lg transition-all ${
-                    plan.popular 
-                      ? 'bg-black text-yellow-400 hover:bg-gray-900' 
-                      : 'bg-yellow-500 text-black hover:bg-yellow-400'
-                  }`}
-                >
-                  {plan.name === 'Enterprise' ? 'Contact Sales' : 'Start Free Trial'}
-                </button>
-              </div>
-            ))}
+  {pricing.map((plan, index) => (
+    <div key={index} className={`rounded-2xl p-8 ${plan.popular ? 'bg-gradient-to-r from-yellow-500 to-yellow-600 transform scale-105 shadow-2xl shadow-yellow-500/20' : 'bg-black border-2 border-yellow-500/20'} hover:shadow-xl transition-all`}>
+      {plan.badge && (
+        <div className="text-center mb-4">
+          <span className={`${plan.popular ? 'bg-black text-yellow-400' : 'bg-yellow-500/20 text-yellow-400'} px-4 py-1 rounded-full text-sm font-medium`}>
+            {plan.badge}
+          </span>
+        </div>
+      )}
+      
+      <div className="text-center">
+        <h3 className={`text-2xl font-bold mb-2 ${plan.popular ? 'text-black' : 'text-white'}`}>{plan.name}</h3>
+        
+        {/* Show strikethrough original price if exists */}
+        {plan.originalPrice && (
+          <div className="mb-1">
+            <span className={`text-xl line-through ${plan.popular ? 'text-gray-800' : 'text-gray-500'}`}>
+              {plan.originalPrice}
+            </span>
           </div>
+        )}
+        
+        <div className="mb-4">
+          <span className={`text-4xl font-bold ${plan.popular ? 'text-black' : 'text-white'}`}>{plan.price}</span>
+          <span className={`text-lg ${plan.popular ? 'text-gray-900' : 'text-gray-400'}`}>{plan.period}</span>
+        </div>
+        
+        <p className={`mb-8 ${plan.popular ? 'text-gray-900' : 'text-gray-400'}`}>{plan.description}</p>
+      </div>
+
+      <ul className="space-y-4 mb-8">
+        {plan.features.map((feature, featureIndex) => (
+          <li key={featureIndex} className="flex items-start space-x-3">
+            <CheckCircle className={`w-5 h-5 mt-0.5 ${plan.popular ? 'text-black' : 'text-yellow-500'}`} />
+            <span className={plan.popular ? 'text-black' : 'text-gray-300'}>{feature}</span>
+          </li>
+        ))}
+      </ul>
+
+      <button 
+        onClick={() => handleTrialStart(plan.name)}
+        className={`w-full py-4 px-6 rounded-xl font-bold text-lg transition-all ${
+          plan.popular 
+            ? 'bg-black text-yellow-400 hover:bg-gray-900' 
+            : 'bg-yellow-500 text-black hover:bg-yellow-400'
+        }`}
+      >
+        {plan.name === 'Enterprise' ? 'Contact Sales' : 'Start Free Trial'}
+      </button>
+    </div>
+  ))}
+</div>
 
           <div className="text-center mt-12">
             <p className="text-gray-400 mb-4">All plans include 14-day free trial • No setup fees • Cancel anytime</p>
@@ -681,12 +699,13 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Footer */}
+            {/* Footer */}
       <footer className="bg-black border-t border-yellow-500/20 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center space-x-2 mb-4">
+            {/* Brand Section - Centered on mobile */}
+            <div className="text-center md:text-left">
+              <div className="flex items-center space-x-2 mb-4 justify-center md:justify-start">
                 <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center">
                   <Brain className="w-5 h-5 text-black" />
                 </div>
@@ -695,7 +714,7 @@ const LandingPage = () => {
               <p className="text-gray-400 mb-4">
                 AI-powered student progress tracking and personalized learning recommendations for modern education.
               </p>
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 justify-center md:justify-start">
                 <button 
                   onClick={handleWhatsAppContact}
                   className="w-10 h-10 bg-gray-900 border border-yellow-500/20 rounded-lg flex items-center justify-center hover:border-yellow-500 cursor-pointer transition-all"
@@ -704,7 +723,7 @@ const LandingPage = () => {
                   <MessageCircle className="w-5 h-5 text-yellow-400" />
                 </button>
                 <button 
-                  onClick={() => window.location.href = 'mailto:support@edutrackwise.com'}
+                  onClick={() => window.location.href = 'mailto:innenta.solutions@gmail.com'}
                   className="w-10 h-10 bg-gray-900 border border-yellow-500/20 rounded-lg flex items-center justify-center hover:border-yellow-500 cursor-pointer transition-all"
                   title="Email us"
                 >
@@ -713,7 +732,8 @@ const LandingPage = () => {
               </div>
             </div>
 
-            <div>
+            {/* Product Section - Centered on mobile */}
+            <div className="text-center md:text-left">
               <h3 className="text-lg font-semibold mb-4 text-yellow-400">Product</h3>
               <ul className="space-y-2 text-gray-400">
                 <li><button onClick={() => scrollToSection('features')} className="hover:text-yellow-400 transition-colors">Features</button></li>
@@ -724,7 +744,8 @@ const LandingPage = () => {
               </ul>
             </div>
 
-            <div>
+            {/* Company Section - Centered on mobile */}
+            <div className="text-center md:text-left">
               <h3 className="text-lg font-semibold mb-4 text-yellow-400">Company</h3>
               <ul className="space-y-2 text-gray-400">
                 <li><a href="#" className="hover:text-yellow-400 transition-colors">About Us</a></li>
@@ -735,7 +756,8 @@ const LandingPage = () => {
               </ul>
             </div>
 
-            <div>
+            {/* Support Section - Centered on mobile */}
+            <div className="text-center md:text-left">
               <h3 className="text-lg font-semibold mb-4 text-yellow-400">Support</h3>
               <ul className="space-y-2 text-gray-400">
                 <li><a href="#" className="hover:text-yellow-400 transition-colors">Help Center</a></li>
@@ -747,12 +769,13 @@ const LandingPage = () => {
             </div>
           </div>
 
+          {/* Bottom Footer - Centered on mobile */}
           <div className="border-t border-yellow-500/20 mt-12 pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-              <p className="text-gray-400">
+            <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+              <p className="text-gray-400 mb-4 md:mb-0">
                 © 2024 EduTrackWise. All rights reserved.
               </p>
-              <div className="flex items-center space-x-6 mt-4 md:mt-0 text-gray-400">
+              <div className="flex items-center justify-center space-x-6 text-gray-400">
                 <span>Powered by Innenta Solutions</span>
               </div>
             </div>
