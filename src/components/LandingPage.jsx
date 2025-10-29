@@ -27,10 +27,6 @@ const LandingPage = () => {
     window.open(`https://wa.me/94774256402?text=${message}`, '_blank');
   };
 
-  const handleVideoWatch = () => {
-    window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
-  };
-
   const handleTrialStart = (planName) => {
     setShowDemoForm(true);
   };
@@ -228,12 +224,12 @@ const LandingPage = () => {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
                 <button 
-                  onClick={handleVideoWatch}
-                  className="border-2 border-yellow-500 text-yellow-400 px-8 py-4 rounded-xl hover:bg-yellow-500 hover:text-black transition-all flex items-center justify-center text-lg font-bold"
-                >
-                  <Play className="w-5 h-5 mr-2" />
-                  Choose Plan
-                </button>
+                onClick={() => scrollToSection('pricing')}
+                className="border-2 border-yellow-500 text-yellow-400 px-8 py-4 rounded-xl hover:bg-yellow-500 hover:text-black transition-all flex items-center justify-center text-lg font-bold"
+              >
+                Choose Plan
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
               </div>
 
               <div className="flex items-center space-x-8 text-sm text-gray-400">
@@ -705,11 +701,8 @@ const LandingPage = () => {
           <div className="grid md:grid-cols-4 gap-8">
             {/* Brand Section - Centered on mobile */}
             <div className="text-center md:text-left">
-              <div className="flex items-center space-x-2 mb-4 justify-center md:justify-start">
-                <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center">
-                  <Brain className="w-5 h-5 text-black" />
-                </div>
-                <span className="text-xl font-bold text-yellow-400">EduTrackWise</span>
+                  <div className="flex items-center space-x-2">
+                <span className="text-2xl font-bold text-yellow-400">EduTrackWise</span>
               </div>
               <p className="text-gray-400 mb-4">
                 AI-powered student progress tracking and personalized learning recommendations for modern education.
