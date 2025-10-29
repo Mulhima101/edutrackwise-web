@@ -149,11 +149,8 @@ const LandingPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-xl flex items-center justify-center">
-                <Brain className="w-6 h-6 text-black" />
-              </div>
-              <span className="text-2xl font-bold text-yellow-400">EduTrackWise</span>
-            </div>
+          <span className="text-2xl font-bold text-yellow-400">EduTrackWise</span>
+        </div>
             
             <div className="hidden md:flex items-center space-x-8">
               <button onClick={() => scrollToSection('features')} className="text-gray-300 hover:text-yellow-400 transition-colors">Features</button>
