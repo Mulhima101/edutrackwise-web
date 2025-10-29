@@ -168,7 +168,7 @@ const LandingPage = () => {
                 onClick={() => setShowDemoForm(true)}
                 className="bg-yellow-500 text-black px-6 py-2 rounded-lg hover:bg-yellow-400 transition-colors font-semibold"
               >
-                Request Demo
+                Contact Us
               </button>
             </div>
 
@@ -193,7 +193,7 @@ const LandingPage = () => {
                 onClick={() => setShowDemoForm(true)}
                 className="w-full text-left px-3 py-2 bg-yellow-500 text-black rounded-lg font-semibold"
               >
-                Request Demo
+                Contact Us
               </button>
             </div>
           </div>
@@ -224,7 +224,7 @@ const LandingPage = () => {
                   onClick={() => setShowDemoForm(true)}
                   className="bg-yellow-500 text-black px-8 py-4 rounded-xl hover:bg-yellow-400 transition-all transform hover:scale-105 flex items-center justify-center text-lg font-bold"
                 >
-                  Request Free Demo
+                  Contact Us
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
                 <button 
@@ -232,7 +232,7 @@ const LandingPage = () => {
                   className="border-2 border-yellow-500 text-yellow-400 px-8 py-4 rounded-xl hover:bg-yellow-500 hover:text-black transition-all flex items-center justify-center text-lg font-bold"
                 >
                   <Play className="w-5 h-5 mr-2" />
-                  Watch Video
+                  Choose Plan
                 </button>
               </div>
 
