@@ -148,10 +148,10 @@ const LandingPage = () => {
       <nav className="fixed top-0 w-full bg-black border-b border-yellow-500/30 z-50 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-2">
-          <span className="text-3xl font-bold bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-500 bg-clip-text text-transparent" style={{ fontFamily: "'Pacifico', cursive" }}>
+           <div className="flex items-center space-x-2">
+          <h1 className="text-3xl font-bold bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-500 bg-clip-text text-transparent leading-tight">
             edusynQ
-          </span>
+          </h1>
         </div>
             
             <div className="hidden md:flex items-center space-x-8">
@@ -701,9 +701,9 @@ const LandingPage = () => {
             {/* Brand Section - Centered on mobile */}
             <div className="text-center md:text-left">
                   <div className="flex items-center space-x-2 mb-4 justify-center md:justify-start">
-            <span className="text-2xl font-bold bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-500 bg-clip-text text-transparent" style={{ fontFamily: "'Pacifico', cursive" }}>
+            <h2 className="text-2xl font-bold bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-500 bg-clip-text text-transparent leading-tight">
               edusynQ
-            </span>
+            </h2>
           </div>
               <p className="text-gray-400 mb-4">
                 AI-powered student progress tracking and personalized learning recommendations for modern education.
