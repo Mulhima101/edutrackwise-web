@@ -149,7 +149,9 @@ const LandingPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
-          <span className="text-2xl font-bold text-yellow-400">EduSynq</span>
+          <span className="text-3xl font-bold bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-500 bg-clip-text text-transparent" style={{ fontFamily: "'Pacifico', cursive" }}>
+            edusynQ
+          </span>
         </div>
             
             <div className="hidden md:flex items-center space-x-8">
@@ -698,9 +700,11 @@ const LandingPage = () => {
           <div className="grid md:grid-cols-4 gap-8">
             {/* Brand Section - Centered on mobile */}
             <div className="text-center md:text-left">
-                  <div className="flex items-center space-x-2">
-                <span className="text-2xl font-bold text-yellow-400">EduSynq</span>
-              </div>
+                  <div className="flex items-center space-x-2 mb-4 justify-center md:justify-start">
+            <span className="text-2xl font-bold bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-500 bg-clip-text text-transparent" style={{ fontFamily: "'Pacifico', cursive" }}>
+              edusynQ
+            </span>
+          </div>
               <p className="text-gray-400 mb-4">
                 AI-powered student progress tracking and personalized learning recommendations for modern education.
               </p>
