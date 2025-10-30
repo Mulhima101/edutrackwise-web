@@ -149,10 +149,10 @@ const LandingPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
            <div className="flex items-center space-x-2">
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-500 bg-clip-text text-transparent leading-tight">
-            edusynQ
-          </h1>
-        </div>
+            <h1 className="text-3xl font-extrabold bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-600 bg-clip-text text-transparent" style={{ lineHeight: '1.3' }}>
+              edusynQ
+            </h1>
+          </div>
             
             <div className="hidden md:flex items-center space-x-8">
               <button onClick={() => scrollToSection('features')} className="text-gray-300 hover:text-yellow-400 transition-colors">Features</button>
@@ -701,7 +701,7 @@ const LandingPage = () => {
             {/* Brand Section - Centered on mobile */}
             <div className="text-center md:text-left">
                   <div className="flex items-center space-x-2 mb-4 justify-center md:justify-start">
-            <h2 className="text-2xl font-bold bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-500 bg-clip-text text-transparent leading-tight">
+            <h2 className="text-2xl font-extrabold bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-600 bg-clip-text text-transparent" style={{ lineHeight: '1.3' }}>
               edusynQ
             </h2>
           </div>
