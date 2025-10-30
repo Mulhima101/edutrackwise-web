@@ -23,7 +23,7 @@ const LandingPage = () => {
   };
 
   const handleWhatsAppContact = () => {
-    const message = encodeURIComponent("Hi, I'm interested in EduSynq. Can you provide more information?");
+    const message = encodeURIComponent("Hi, I'm interested in edusynQ. Can you provide more information?");
     window.open(`https://wa.me/94774256402?text=${message}`, '_blank');
   };
 
@@ -73,7 +73,7 @@ const LandingPage = () => {
     {
       name: "Dr. Sarah Johnson",
       role: "Principal, Metro High School",
-      content: "EduSynq helped us identify struggling students 3 weeks earlier than traditional methods. Our pass rates improved by 28%.",
+      content: "edusynQ helped us identify struggling students 3 weeks earlier than traditional methods. Our pass rates improved by 28%.",
       rating: 5
     },
     {
@@ -211,7 +211,7 @@ const LandingPage = () => {
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                EduSynq automatically generates AI-powered quizzes, analyzes student performance, and provides personalized skill assessments with study resources for both students and professors.
+                edusynQ automatically generates AI-powered quizzes, analyzes student performance, and provides personalized skill assessments with study resources for both students and professors.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -326,7 +326,7 @@ const LandingPage = () => {
       <section id="features" className="py-16 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">How EduSynq Solves This</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">How edusynQ Solves This</h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Our AI-powered platform transforms education with intelligent insights and personalized learning experiences
             </p>
@@ -419,7 +419,7 @@ const LandingPage = () => {
       <section id="benefits" className="py-16 bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-black mb-4">Why Institutions Choose EduSynq</h2>
+            <h2 className="text-4xl font-bold text-black mb-4">Why Institutions Choose edusynQ</h2>
             <p className="text-xl text-gray-900 max-w-3xl mx-auto">
               Join thousands of educators who have transformed their teaching with our AI-powered insights
             </p>
@@ -448,7 +448,7 @@ const LandingPage = () => {
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-black mb-2">85%</div>
-                <p className="text-gray-900">Prefer EduSynq over traditional LMS</p>
+                <p className="text-gray-900">Prefer edusynQ over traditional LMS</p>
               </div>
             </div>
           </div>
@@ -460,7 +460,7 @@ const LandingPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Simple 3-Step Process</h2>
-            <p className="text-xl text-gray-400">Get started with EduSynq in minutes, not months</p>
+            <p className="text-xl text-gray-400">Get started with edusynQ in minutes, not months</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -631,7 +631,7 @@ const LandingPage = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-400">Everything you need to know about EduSynq</p>
+            <p className="text-xl text-gray-400">Everything you need to know about edusynQ</p>
           </div>
 
           <div className="space-y-8">
@@ -658,7 +658,7 @@ const LandingPage = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-black mb-6">Ready to Transform Student Learning?</h2>
           <p className="text-xl text-gray-900 mb-8 max-w-2xl mx-auto">
-            Join thousands of educators who have already improved student outcomes with EduSynq. Start your free trial today.
+            Join thousands of educators who have already improved student outcomes with edusynQ. Start your free trial today.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -767,7 +767,7 @@ const LandingPage = () => {
           <div className="border-t border-yellow-500/20 mt-12 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
               <p className="text-gray-400 mb-4 md:mb-0">
-                © 2024 EduSynq. All rights reserved.
+                © 2024 edusynQ. All rights reserved.
               </p>
               <div className="flex items-center justify-center space-x-6 text-gray-400">
                 <span>Powered by Innenta Solutions</span>
