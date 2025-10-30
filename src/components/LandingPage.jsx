@@ -148,11 +148,11 @@ const LandingPage = () => {
       <nav className="fixed top-0 w-full bg-black border-b border-yellow-500/30 z-50 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-          <div className="flex items-center space-x-2 py-2">
-          <h1 className="text-2xl sm:text-3xl font-extrabold bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-600 bg-clip-text text-transparent pb-1" style={{ lineHeight: '1.5', display: 'inline-block' }}>
-            edusynQ
-          </h1>
-        </div>
+        <div className="flex items-center space-x-2" style={{ paddingTop: '4px', paddingBottom: '4px' }}>
+        <h1 className="text-2xl sm:text-3xl font-extrabold bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-600 bg-clip-text text-transparent" style={{ lineHeight: '1.6', paddingBottom: '3px' }}>
+          edusynQ
+        </h1>
+      </div>
             
             <div className="hidden md:flex items-center space-x-8">
               <button onClick={() => scrollToSection('features')} className="text-gray-300 hover:text-yellow-400 transition-colors">Features</button>
